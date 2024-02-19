@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter  , Routes, Route } from "react-router-dom";
 import "./App.css";
 import CourseSinglePage from "./Page/CourseSinglePage/CourseSinglePage";
 import CourseSingle from "./Page/CourseSinglePage/CourseSinglePage";
@@ -27,11 +27,6 @@ import TopCategories from "./components/TopCategories/TopCategories";
 import { Switch } from "@mui/material";
 import ContantCourseSingle from "./components/ContantCourseSingle/ContantCourseSingle";
 import AllCourse from "./Page/AllCourse/AllCourse";
-import ToCardCourse from "./components/ToCardCourse/ToCardCourse";
-import ToCardLineCourse from "./components/ToCardLineCourse/ToCardLineCourse";
-import HeadAllArticals from "./components/HeadAllArticals/HeadAllArticals";
-import ArticalsCatgory from "./components/ArticalsCatgory/ArticalsCatgory";
-import ArticalsCard from "./components/ArticalsCard/ArticalsCard";
 import FAQsPage from "./Page/FAQsPage/FAQsPage";
 import Contact from "./Page/Contact/Contact";
 import BlogSinglePage from "./Page/BlogSinglePage/BlogSinglePage";
@@ -40,7 +35,7 @@ import LoginRegister from "./components/LoginRegister/LoginRegister";
 import Erro from "./components/Erro/Erro";
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <NavBar />
       <Routes>
         <Route path="/" exact={true} Component={Home} />
@@ -57,9 +52,7 @@ function App() {
         <Route path="/LoginRegister" exact={true} Component={LoginRegister} />
       </Routes>
       <Footer />
-    </BrowserRouter>
-    // <LoginRegister/>
-    // <Erro/>
+    </HashRouter>
   );
 }
 
